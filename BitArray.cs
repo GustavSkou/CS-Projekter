@@ -28,7 +28,7 @@ class Program
         }
         foreach (bool bit in bitArray)
         {
-            switch (bit)
+            switch (bit) //something
             {
                 case true:
                     Console.Write("1 ");

@@ -1,6 +1,7 @@
 ﻿class Map{
     public int rows, columns;
     public char emptyCell = '.';
+    public char apple = 'a';
     public char[,] map;
 
     public Map(int rowsInput, int columnsInput)
@@ -38,12 +39,16 @@
 
 class Player 
 {
-    public int row, column;
+    public int row, column, playerScore;
     public char model = '¤';
+    public List<int> snake = new List<int>();
+
     public Player()
     {
         row = 0;
         column = 0;
+
+        snake[0] = 0;
     }
 
     public void spawn(Map gameMap)
@@ -77,8 +82,16 @@ class Player
                 break;
         }
 
+        playerScore = gameMap.map[row, column] == gameMap.apple ? score() : playerScore = playerScore;
+
         gameMap.map[row, column] = model;
         gameMap.printMap();
+    }
+
+    void score()
+    {
+        playerScore++;
+        snake.Add(playerScore);
     }
 }
 
@@ -122,15 +135,11 @@ class Game
     }
 }
 
-class Point
+class Item
 {
     public int row, column;
 
-    public int pointScore = 1;
-    public Point()
-    {
-        
-    }
+    public int pointValue = 1;
 
     public void spawn(Map gameMap)
     {
@@ -138,7 +147,7 @@ class Point
         row = ran.Next(10);
         column = ran.Next(10);
 
-        gameMap.map[row, column] = 'a';
+        gameMap.map[row, column] = gameMap.apple;
     }
 }
 
@@ -154,7 +163,7 @@ class Program
 
         Game newGame = new Game(true);
 
-        Point points = new Point();
+        Item points = new Item();
         points.spawn(gameMap);
 
         while(newGame.run)

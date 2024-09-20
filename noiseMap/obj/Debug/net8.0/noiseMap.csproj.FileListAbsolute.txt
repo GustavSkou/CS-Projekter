@@ -1,0 +1,15 @@
+C:\Users\gusta\Desktop\c#\noiseMap\bin\Debug\net8.0\noiseMap.exe
+C:\Users\gusta\Desktop\c#\noiseMap\bin\Debug\net8.0\noiseMap.deps.json
+C:\Users\gusta\Desktop\c#\noiseMap\bin\Debug\net8.0\noiseMap.runtimeconfig.json
+C:\Users\gusta\Desktop\c#\noiseMap\bin\Debug\net8.0\noiseMap.dll
+C:\Users\gusta\Desktop\c#\noiseMap\bin\Debug\net8.0\noiseMap.pdb
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.AssemblyInfoInputs.cache
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.AssemblyInfo.cs
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.csproj.CoreCompileInputs.cache
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.sourcelink.json
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.dll
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\refint\noiseMap.dll
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.pdb
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\noiseMap.genruntimeconfig.cache
+C:\Users\gusta\Desktop\c#\noiseMap\obj\Debug\net8.0\ref\noiseMap.dll

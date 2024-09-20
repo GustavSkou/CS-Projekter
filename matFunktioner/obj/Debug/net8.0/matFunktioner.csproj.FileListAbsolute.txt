@@ -1,0 +1,15 @@
+C:\Users\gusta\Desktop\c#\matFunktioner\bin\Debug\net8.0\matFunktioner.exe
+C:\Users\gusta\Desktop\c#\matFunktioner\bin\Debug\net8.0\matFunktioner.deps.json
+C:\Users\gusta\Desktop\c#\matFunktioner\bin\Debug\net8.0\matFunktioner.runtimeconfig.json
+C:\Users\gusta\Desktop\c#\matFunktioner\bin\Debug\net8.0\matFunktioner.dll
+C:\Users\gusta\Desktop\c#\matFunktioner\bin\Debug\net8.0\matFunktioner.pdb
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.AssemblyInfoInputs.cache
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.AssemblyInfo.cs
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.csproj.CoreCompileInputs.cache
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.sourcelink.json
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.dll
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\refint\matFunktioner.dll
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.pdb
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\matFunktioner.genruntimeconfig.cache
+C:\Users\gusta\Desktop\c#\matFunktioner\obj\Debug\net8.0\ref\matFunktioner.dll

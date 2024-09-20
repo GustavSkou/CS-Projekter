@@ -1,0 +1,5 @@
+C:\Users\gusta\Desktop\c#\obj\Debug\net8.0\c#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\Desktop\c#\obj\Debug\net8.0\c#.AssemblyInfoInputs.cache
+C:\Users\gusta\Desktop\c#\obj\Debug\net8.0\c#.AssemblyInfo.cs
+C:\Users\gusta\Desktop\c#\obj\Debug\net8.0\c#.csproj.CoreCompileInputs.cache
+C:\Users\gusta\Desktop\c#\obj\Debug\net8.0\c#.sourcelink.json

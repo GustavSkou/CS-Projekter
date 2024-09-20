@@ -1,6 +1,4 @@
-﻿using System.Data;
-
-class Map{
+﻿class Map{
     public int rows, columns;
     public char emptyCell = '.';
     public char[,] map;
@@ -22,8 +20,9 @@ class Map{
             }
         }
     }
+
     public void printMap(){
-        
+
         Console.Clear();
 
         for(int row = 0; row < rows; row++)
@@ -35,8 +34,6 @@ class Map{
             }
         }
     }
-
-
 }
 
 class Player 
@@ -58,6 +55,7 @@ class Player
     public void movement(Game.WASD input, Map gameMap)
     {
         int inputNum = (int) input;
+        
         gameMap.map[row, column] = gameMap.emptyCell;
 
         switch(inputNum)
@@ -75,7 +73,7 @@ class Player
                 column++;
                 break;
             default:
-                gameMap.map[row, column] = model;
+                gameMap.map[row, column] = model; //Bug here, walk up then default?!
                 break;
         }
 
@@ -83,6 +81,7 @@ class Player
         gameMap.printMap();
     }
 }
+
 class Game
 {
     public bool run = false;
@@ -122,6 +121,27 @@ class Game
         return 0;
     }
 }
+
+class Point
+{
+    public int row, column;
+
+    public int pointScore = 1;
+    public Point()
+    {
+        
+    }
+
+    public void spawn(Map gameMap)
+    {
+        Random ran = new Random();
+        row = ran.Next(10);
+        column = ran.Next(10);
+
+        gameMap.map[row, column] = 'a';
+    }
+}
+
 class Program
 {
     static void Main()
@@ -133,6 +153,9 @@ class Program
         player.spawn(gameMap);
 
         Game newGame = new Game(true);
+
+        Point points = new Point();
+        points.spawn(gameMap);
 
         while(newGame.run)
         {

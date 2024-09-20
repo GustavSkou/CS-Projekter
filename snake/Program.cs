@@ -2,6 +2,7 @@
 
 class Map{
     public int rows, columns;
+    public char emptyCell = '.';
     public char[,] map;
 
     public Map(int rowsInput, int columnsInput)
@@ -17,7 +18,7 @@ class Map{
         {
             for(int column = 0; column < columns; column++)
             {
-                map[row, column] = '.';
+                map[row, column] = emptyCell;
             }
         }
     }
@@ -42,30 +43,83 @@ class Player
 {
     public int row, column;
     public char model = '¤';
+    public Player()
+    {
+        row = 0;
+        column = 0;
+    }
 
     public void spawn(Map gameMap)
     {
-        gameMap.map[0, 0] = model;
+        gameMap.map[row, column] = model;
         gameMap.printMap();
     }
 
-    void move()
+    public void movement(Game.WASD input, Map gameMap)
     {
+        int inputNum = (int) input;
+        gameMap.map[row, column] = gameMap.emptyCell;
 
+        switch(inputNum)
+        {
+            case 0:
+                row--;
+                break;
+            case 1:
+                column--;
+                break;
+            case 2:
+                row++;
+                break;
+            case 3:
+                column++;
+                break;
+            default:
+                gameMap.map[row, column] = model;
+                break;
+        }
+
+        gameMap.map[row, column] = model;
+        gameMap.printMap();
     }
 }
 class Game
 {
-    public void tick()
+    public bool run = false;
+    public Game(bool start)
     {
-        while (true)
+        run = start;
+    }
+
+    public enum WASD
+    {
+        W,
+        A,
+        S,
+        D
+    }
+    public WASD UpdateMovement()
+    {
+        var movement = Console.ReadKey(false).Key;
+
+        if (movement == ConsoleKey.W)
         {
-            var movement = Console.ReadKey(false).Key;
-            if (movement ==  ConsoleKey.W || movement == ConsoleKey.A || movement == ConsoleKey.D || movement == ConsoleKey.S)
-            {
-                
-            }
+            return WASD.W;
         }
+        if (movement == ConsoleKey.A)
+        {
+            return WASD.A;
+        }
+        if (movement == ConsoleKey.S)
+        {
+            return WASD.S;
+        }
+        if (movement == ConsoleKey.D)
+        {
+            return WASD.D;
+        }
+
+        return 0;
     }
 }
 class Program
@@ -78,8 +132,11 @@ class Program
         Player player = new Player();
         player.spawn(gameMap);
 
-        Game newGame = new Game();
-        newGame.tick();
+        Game newGame = new Game(true);
 
+        while(newGame.run)
+        {
+            player.movement(newGame.UpdateMovement(), gameMap);
+        }
     }
 }

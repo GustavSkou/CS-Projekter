@@ -24,7 +24,7 @@
 
     public void printMap(){
 
-        Console.Clear();
+        //Console.Clear();
 
         for(int row = 0; row < rows; row++)
         {
@@ -39,59 +39,66 @@
 
 class Player 
 {
-    public int row, column, playerScore;
     public char model = '¤';
-    public List<int> snake = new List<int>();
+    public List<int[]> snakePosition = new();
 
     public Player()
     {
-        row = 0;
-        column = 0;
-
-        snake[0] = 0;
+        int[] position = {0, 0};
+        snakePosition.Add(position);
     }
 
     public void spawn(Map gameMap)
     {
-        gameMap.map[row, column] = model;
+        gameMap.map[snakePosition[0][0], snakePosition[0][1]] = model;
         gameMap.printMap();
     }
 
     public void movement(Game.WASD input, Map gameMap)
     {
         int inputNum = (int) input;
-        
-        gameMap.map[row, column] = gameMap.emptyCell;
+        int[] snakeTail = snakePosition[snakePosition.Count - 1];
+        gameMap.map[snakePosition[snakePosition.Count - 1][0], snakePosition[snakePosition.Count - 1][1]] = gameMap.emptyCell;
+
+        Console.WriteLine(snakeTail[0] + " " + snakeTail[1]);
 
         switch(inputNum)
         {
             case 0:
-                row--;
+                snakePosition[0][0]--;
                 break;
             case 1:
-                column--;
+                snakePosition[0][1]--;
                 break;
             case 2:
-                row++;
+                snakePosition[0][0]++;
                 break;
             case 3:
-                column++;
+                snakePosition[0][1]++;
                 break;
             default:
-                gameMap.map[row, column] = model; //Bug here, walk up then default?!
+                gameMap.map[snakePosition[0][0], snakePosition[0][1]] = model;
                 break;
         }
 
-        playerScore = gameMap.map[row, column] == gameMap.apple ? score() : playerScore = playerScore;
+        if (gameMap.map[snakePosition[0][0], snakePosition[0][1]] == gameMap.apple)
+        {
+            expandSnake(snakeTail);
+        }
 
-        gameMap.map[row, column] = model;
+        for (int i = 0; i < snakePosition.Count(); i++)
+        {
+            gameMap.map[snakePosition[i][0], snakePosition[i][1] ] = model;
+            Console.WriteLine(snakePosition[i][0] + " " + snakePosition[i][1]);
+        }
+        
         gameMap.printMap();
     }
 
-    void score()
+    void expandSnake(int[] tailPosition)
     {
-        playerScore++;
-        snake.Add(playerScore);
+        snakePosition.Add(tailPosition);
+        Console.WriteLine("Her");
     }
 }
 
@@ -130,7 +137,6 @@ class Game
         {
             return WASD.D;
         }
-
         return 0;
     }
 }

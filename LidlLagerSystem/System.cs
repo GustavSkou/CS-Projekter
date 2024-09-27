@@ -5,7 +5,7 @@ class ProductNotFoundException : Exception {
     {}
 }
 
-public class ProductSystem
+class ProductSystem
 {
     public Dictionary<string, Product> productLookUp = new Dictionary<string, Product>();
 
@@ -17,7 +17,7 @@ public class ProductSystem
         }
     }
 
-    public double getPrice(string productName)
+    protected double getPrice(string productName)
     {
         try 
         {
@@ -29,7 +29,7 @@ public class ProductSystem
         }
     }
 
-    public int getUnitCount(string productName)
+    protected int getUnitCount(string productName)
     {
         try 
         {

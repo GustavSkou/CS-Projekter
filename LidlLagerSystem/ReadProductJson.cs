@@ -1,5 +1,5 @@
 using System.Text.Json;
-public class Product
+class Product
 {
     public string Name {get; set;}    
     public double Price {get; set;}
@@ -7,9 +7,10 @@ public class Product
     public List<Product> AllProducts { get; set; } 
     public Product productsList;
 
-    public void readJsonFile(string fileLocation)
+    public Product getJsonFile(string fileLocation)
     {
         string text = File.ReadAllText(fileLocation);
         productsList = JsonSerializer.Deserialize<Product>(text);
+        return productsList;
     }
 }

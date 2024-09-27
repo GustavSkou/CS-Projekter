@@ -2,7 +2,6 @@ class Commands : ProductSystem
 {
     protected void UseCommands(string[] command)
     {
-        
         switch ( command[ 0 ] )
         {
             case "getprice":
@@ -18,6 +17,10 @@ class Commands : ProductSystem
                 {
                     Console.WriteLine(item);
                 }
+            break;
+
+            case "startsystem":
+                CreateLookUpTable(readProducts());
             break;
         }
     }

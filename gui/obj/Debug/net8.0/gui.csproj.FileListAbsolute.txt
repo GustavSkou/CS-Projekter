@@ -1,0 +1,15 @@
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.AssemblyInfoInputs.cache
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.AssemblyInfo.cs
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.csproj.CoreCompileInputs.cache
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.sourcelink.json
+C:\Users\gusta\Desktop\c#\gui\bin\Debug\net8.0\gui.exe
+C:\Users\gusta\Desktop\c#\gui\bin\Debug\net8.0\gui.deps.json
+C:\Users\gusta\Desktop\c#\gui\bin\Debug\net8.0\gui.runtimeconfig.json
+C:\Users\gusta\Desktop\c#\gui\bin\Debug\net8.0\gui.dll
+C:\Users\gusta\Desktop\c#\gui\bin\Debug\net8.0\gui.pdb
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.dll
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\refint\gui.dll
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.pdb
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\gui.genruntimeconfig.cache
+C:\Users\gusta\Desktop\c#\gui\obj\Debug\net8.0\ref\gui.dll

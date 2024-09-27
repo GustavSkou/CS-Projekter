@@ -41,6 +41,7 @@ class Player
 {
     public char model = '¤';
     public List<int[]> snakePosition = new();
+    public int[] snakeTail = new int[2];
 
     public Player()
     {
@@ -56,12 +57,13 @@ class Player
 
     public void movement(Game.WASD input, Map gameMap)
     {
+        snakeTail[0] = snakePosition[snakePosition.Count - 1][0];
+        snakeTail[1] = snakePosition[snakePosition.Count - 1][1];
+        
+        
+        
+  
         int inputNum = (int) input;
-        int[] snakeTail = snakePosition[snakePosition.Count - 1];
-        gameMap.map[snakePosition[snakePosition.Count - 1][0], snakePosition[snakePosition.Count - 1][1]] = gameMap.emptyCell;
-
-        Console.WriteLine(snakeTail[0] + " " + snakeTail[1]);
-
         switch(inputNum)
         {
             case 0:
@@ -81,17 +83,14 @@ class Player
                 break;
         }
 
-        if (gameMap.map[snakePosition[0][0], snakePosition[0][1]] == gameMap.apple)
-        {
-            expandSnake(snakeTail);
-        }
 
-        for (int i = 0; i < snakePosition.Count(); i++)
+        if (gameMap.map[snakePosition[0][0], snakePosition[0][1]] != gameMap.apple)
         {
-            gameMap.map[snakePosition[i][0], snakePosition[i][1] ] = model;
-            Console.WriteLine(snakePosition[i][0] + " " + snakePosition[i][1]);
+            gameMap.map[snakeTail[0], snakeTail[1]] = gameMap.emptyCell;
         }
-        
+ 
+        gameMap.map[snakePosition[0][0], snakePosition[0][1] ] = model;
+
         gameMap.printMap();
     }
 

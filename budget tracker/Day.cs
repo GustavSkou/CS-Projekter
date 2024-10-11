@@ -1,44 +1,94 @@
-class Day
-{
-    private string name ;
+using System.Globalization;
 
-    public Day (DayOfWeek dayOfWeek)
+abstract class Day
+{
+    protected string name;
+    protected double spend;
+    protected int id;
+    private DateTime dateTime;
+
+    public Day (DateTime dateTime)
     {
-        this.name = SetDayName(dayOfWeek);
+        this.dateTime = dateTime;
+        id = dateTime.Day;
+    }
+    public DateTime GetDate()
+    {
+        return dateTime;
     }
 
     public string getName()
     {
-        return this.name;
+        return name;
     }
 
-    private string SetDayName (DayOfWeek dayOfWeek)
+    public int GetDay()
     {
-        switch(dayOfWeek)
-        {    
-            case DayOfWeek.Monday:
-            return "monday";
-        
-            case DayOfWeek.Tuesday:
-            return "tuesday";
+        return id;
+    }
 
-            case DayOfWeek.Wednesday:
-            return "wednesday";
+    public double GetSpend()
+    {
+        return spend;
+    }
+    public void AddToSpend(double amount)
+    {
+        spend = spend + amount;
+    }
+}
 
-            case DayOfWeek.Thursday:
-            return "thursday";
+class Monday : Day
+{
+    public Monday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Monday";
+    }
+}
 
-            case DayOfWeek.Friday:
-            return "friday";
+class Tuesday : Day
+{
+    public Tuesday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Tuesday";
+    }
+}
 
-            case DayOfWeek.Saturday:
-            return "saturday";    
-        
-            case DayOfWeek.Sunday:
-            return "sunday";
+class Wednesday : Day
+{
+    public Wednesday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Wednesday";
+    }
+}
 
-            default:
-            return "";
-        }
+class Thursday : Day
+{
+    public Thursday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Thursday";
+    }
+}
+
+class Friday : Day
+{
+    public Friday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Friday";
+    }
+}
+
+class Saturday : Day
+{
+    public Saturday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Saturday";
+    }
+}
+
+class Sunday : Day
+{
+    public Sunday(DateTime dateTime) : base(dateTime)
+    {
+        this.name = "Sunday";
     }
 }

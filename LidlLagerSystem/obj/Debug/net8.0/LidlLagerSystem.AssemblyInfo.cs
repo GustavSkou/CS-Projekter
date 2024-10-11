@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LidlLagerSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2faf6561d7de9588c170b5b024231de9e1d6ae51")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+232bc27e9a2b6bf172d2f93da13cc5a6e639235e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LidlLagerSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LidlLagerSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,23 +1,28 @@
-﻿
-
-class ProductNotFoundException : Exception {
-    public ProductNotFoundException(string message) : base(message)
-    {}
+﻿class ProductNotFoundException : Exception 
+{
+    public ProductNotFoundException(string message) : base(message) {}
 }
 
-public class ProductSystem
+class ProductSystem : Product
 {
     public Dictionary<string, Product> productLookUp = new Dictionary<string, Product>();
 
+    public List<Product> readProducts() 
+    {
+        getJsonFile(@"C:\Users\gusta\Desktop\c#\CS-Projekter\LidlLagerSystem\produkter.json");
+        return productsList.AllProducts;
+    }
+    
     public void CreateLookUpTable(List<Product> products)
     {
         foreach (var someProduct in products) 
         {
             productLookUp.Add(someProduct.Name, someProduct);
         }
+        Console.WriteLine("LookUpTable Created");
     }
 
-    public double getPrice(string productName)
+    protected double getPrice(string productName)
     {
         try 
         {
@@ -29,7 +34,7 @@ public class ProductSystem
         }
     }
 
-    public int getUnitCount(string productName)
+    protected int getUnitCount(string productName)
     {
         try 
         {

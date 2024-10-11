@@ -15,8 +15,8 @@ class Year
         
         for(int month = 0; month < months.Length; month++)
         {
-            dateTime.AddMonths(month);
             months[month] = new Month(calendar, dateTime);
+            dateTime = dateTime.AddMonths(1);
         }
     }
 }

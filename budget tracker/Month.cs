@@ -13,17 +13,19 @@ class Month
         daysInMonth = calendar.GetDaysInMonth(calendar.GetYear(dateTime), calendar.GetMonth(dateTime));
         
         name = SetMonthName(dateTime);
-        SetDaysInMonth(dateTime);
+        days = SetDaysInMonth(dateTime);
     }
 
-    private void SetDaysInMonth(DateTime dateTime)
+    private Day[] SetDaysInMonth(DateTime dateTime)
     {
-        this.days = new Day[daysInMonth];
+        Day[] someMonthDays = new Day[daysInMonth];
+
         for (int date = 0; date < daysInMonth; date++)
         {
+            someMonthDays[date] = new Day(dateTime.DayOfWeek);
             dateTime = dateTime.AddDays(1);
-            days[date] = new Day(dateTime.DayOfWeek);
-        }   
+        }
+        return someMonthDays;
     }
 
     private String SetMonthName(DateTime dateTime)

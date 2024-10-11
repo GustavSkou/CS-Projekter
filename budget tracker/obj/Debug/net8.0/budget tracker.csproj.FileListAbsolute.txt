@@ -1,0 +1,15 @@
+C:\Users\gusta\Desktop\c#\budget tracker\bin\Debug\net8.0\budget tracker.exe
+C:\Users\gusta\Desktop\c#\budget tracker\bin\Debug\net8.0\budget tracker.deps.json
+C:\Users\gusta\Desktop\c#\budget tracker\bin\Debug\net8.0\budget tracker.runtimeconfig.json
+C:\Users\gusta\Desktop\c#\budget tracker\bin\Debug\net8.0\budget tracker.dll
+C:\Users\gusta\Desktop\c#\budget tracker\bin\Debug\net8.0\budget tracker.pdb
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.AssemblyInfoInputs.cache
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.AssemblyInfo.cs
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.csproj.CoreCompileInputs.cache
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.sourcelink.json
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.dll
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\refint\budget tracker.dll
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.pdb
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\budget tracker.genruntimeconfig.cache
+C:\Users\gusta\Desktop\c#\budget tracker\obj\Debug\net8.0\ref\budget tracker.dll

@@ -42,15 +42,3 @@ public class ProductSystem
     }
 }
 
-class Program
-{
-    static void Main()
-    {
-        Product list = new Product();
-        list.readJsonFile(@"C:\Users\gusta\Desktop\c#\LidlLagerSystem\produkter.json");
-        ProductSystem lidlSystem = new ProductSystem();
-
-        lidlSystem.CreateLookUpTable(list.productsList.AllProducts);
-        Console.WriteLine(lidlSystem.getPrice("Pasta"));
-    }
-}
